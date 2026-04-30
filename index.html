@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ziel Contractor Drilling Company — Ohio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:       #E8600A;
+      --orange-light: #FF7A20;
+      --orange-dark:  #C44E00;
+      --gray-dark:    #1A1A1A;
+      --gray-mid:     #3D3D3D;
+      --gray:         #6B6B6B;
+      --gray-light:   #D4D4D4;
+      --gray-bg:      #F5F5F5;
+      --white:        #FFFFFF;
+      --shadow:    0 4px 24px rgba(0,0,0,0.12);
+      --shadow-lg: 0 12px 48px rgba(0,0,0,0.18);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(26,26,26,0.97); backdrop-filter: blur(10px);
+      height: 76px; padding: 0 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 3px solid var(--orange);
+    }
+
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo-img {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-phone { color: var(--orange) !important; font-weight: 700 !important; font-size: 15px !important; }
+    .nav-cta {
+      background: var(--orange); color: var(--white) !important;
+      padding: 9px 20px; border-radius: 6px; font-weight: 700 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--orange-light) !important; }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://static.prod-images.emergentagent.com/jobs/97748881-a920-4b55-82d1-de2675e66f80/images/7226bf69252f792afdae215beb07dfdb4c06a8bcd3de57817472be1a0f9b857f.png');
+      background-size: cover; background-position: center; filter: brightness(0.38);
+    }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,26,26,0.88) 0%, rgba(232,96,10,0.1) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 130px 48px 80px; width: 100%; }
+
+    .hero-logo-lockup { margin-bottom: 36px; }
+    .hero-logo-img {
+      height: 96px;
+      width: auto;
+      max-width: 380px;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(232,96,10,0.18); border: 1px solid var(--orange);
+      color: var(--orange); padding: 7px 16px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--orange); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(46px, 7vw, 86px); font-weight: 800; color: var(--white);
+      line-height: 1.0; text-transform: uppercase; margin-bottom: 22px; letter-spacing: 1px;
+    }
+    .hero h1 em { font-style: normal; color: var(--orange); }
+    .hero-sub { font-size: 17px; color: rgba(255,255,255,0.78); max-width: 540px; line-height: 1.7; margin-bottom: 36px; }
+
+    .hero-stats { display: flex; gap: 44px; margin-bottom: 44px; }
+    .hero-stat strong { display: block; font-size: 34px; font-weight: 800; color: var(--orange); font-family: 'Barlow Condensed', sans-serif; }
+    .hero-stat span { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--orange); color: var(--white); padding: 15px 34px; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; letter-spacing: .5px; display: inline-flex; align-items: center; gap: 8px; transition: background .2s, transform .2s; }
+    .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--white); padding: 15px 34px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: border-color .2s; }
+    .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ── WOB BANNER ── */
+    .wob-banner { background: linear-gradient(90deg, var(--orange-dark), var(--orange), var(--orange-dark)); padding: 18px 40px; }
+    .wob-banner-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .wob-icon { font-size: 26px; }
+    .wob-text { color: var(--white); font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .wob-divider { width: 2px; height: 22px; background: rgba(255,255,255,0.35); }
+    .wob-sub { color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; }
+
+    /* ── SECTIONS ── */
+    section { padding: 96px 48px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { display: inline-block; color: var(--orange); font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(30px, 4vw, 50px); font-weight: 700; text-transform: uppercase; color: var(--gray-dark); line-height: 1.1; margin-bottom: 14px; }
+    .section-desc { color: var(--gray); font-size: 16px; line-height: 1.7; max-width: 560px; }
+
+    /* ── SERVICES ── */
+    .services { background: var(--gray-bg); }
+    .services-header { text-align: center; margin-bottom: 60px; }
+    .services-header .section-desc { margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+
+    .service-card { background: var(--white); border-radius: 12px; padding: 38px 34px; border: 1px solid rgba(0,0,0,0.06); transition: transform .25s, box-shadow .25s, border-color .25s; position: relative; overflow: hidden; }
+    .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--orange); transform:scaleX(0); transition:transform .25s; transform-origin:left; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(232,96,10,.2); }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-card.featured { background: var(--gray-dark); border-color: var(--orange); }
+    .service-card.featured::before { transform: scaleX(1); }
+    .service-card.featured .service-title { color: var(--white); }
+    .service-card.featured .service-desc  { color: rgba(255,255,255,.7); }
+
+    .service-icon { width: 52px; height: 52px; background: rgba(232,96,10,.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+    .service-card.featured .service-icon { background: rgba(232,96,10,.25); }
+    .service-title { font-size: 19px; font-weight: 700; color: var(--gray-dark); margin-bottom: 10px; }
+    .service-desc  { color: var(--gray); font-size: 14px; line-height: 1.65; }
+    .service-tag { display: inline-block; margin-top: 14px; background: var(--orange); color: var(--white); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 11px; border-radius: 4px; }
+
+    /* ── DIFFERENTIATOR ── */
+    .diff-strip { background: var(--gray-dark); padding: 72px 48px; }
+    .diff-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .diff-text .section-title { color: var(--white); }
+    .diff-text .section-desc  { color: rgba(255,255,255,.7); margin-bottom: 24px; }
+    .diff-features { display: flex; flex-direction: column; gap: 14px; }
+    .diff-feature { display: flex; align-items: flex-start; gap: 12px; }
+    .diff-check { width: 22px; height: 22px; min-width: 22px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--white); margin-top: 2px; }
+    .diff-feature-text { color: rgba(255,255,255,.82); font-size: 14px; line-height: 1.5; }
+    .diff-feature-text strong { color: var(--white); }
+    .diff-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .diff-stat-box { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 26px 22px; text-align: center; }
+    .diff-stat-box strong { display: block; font-family: 'Barlow Condensed',sans-serif; font-size: 40px; font-weight: 800; color: var(--orange); }
+    .diff-stat-box span { font-size: 12px; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: 1px; }
+    .diff-stat-box.accent { background: var(--orange); border-color: var(--orange); grid-column: span 2; }
+    .diff-stat-box.accent strong { color: var(--white); font-size: 20px; line-height: 1.3; }
+    .diff-stat-box.accent span   { color: rgba(255,255,255,.8); }
+
+    /* ── GALLERY ── */
+    .gallery { background: var(--white); }
+    .gallery-header { margin-bottom: 32px; }
+
+    /* Filter tabs */
+    .gallery-filters {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .gf-btn {
+      background: var(--gray-bg); border: 1.5px solid var(--gray-light);
+      color: var(--gray-mid); padding: 8px 18px; border-radius: 50px;
+      font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s;
+      font-family: inherit;
+    }
+    .gf-btn:hover, .gf-btn.active {
+      background: var(--orange); border-color: var(--orange);
+      color: var(--white);
+    }
+
+    /* Stats bar */
+    .gallery-stats {
+      display: flex; align-items: center; gap: 0;
+      background: var(--gray-dark); border-radius: 12px;
+      padding: 20px 32px; margin-bottom: 36px;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .gs-item { text-align: center; flex: 1; min-width: 100px; }
+    .gs-item strong { display: block; font-family: 'Barlow Condensed',sans-serif; font-size: 22px; font-weight: 800; color: var(--orange); }
+    .gs-item span { font-size: 11px; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: 1px; }
+    .gs-divider { width: 1px; height: 40px; background: rgba(255,255,255,.12); flex-shrink: 0; }
+
+    /* Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 220px;
+      gap: 14px;
+    }
+    .gallery-item {
+      border-radius: 10px; overflow: hidden; position: relative;
+      cursor: pointer; background: #222;
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; display: block; }
+    .gallery-item:hover img { transform: scale(1.07); }
+    .gi-featured { grid-column: span 4; grid-row: span 2; }
+
+    .gallery-item.hidden { display: none; }
+
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,26,26,.88) 0%, rgba(26,26,26,.1) 55%, transparent 100%);
+      opacity: 0; transition: opacity .3s;
+      display: flex; align-items: flex-end; padding: 18px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gi-featured .gallery-overlay { opacity: 1; }
+    .gi-featured .gallery-overlay { background: linear-gradient(to top, rgba(26,26,26,.82) 0%, transparent 50%); }
+
+    .gallery-caption { color: var(--white); font-size: 13px; font-weight: 600; line-height: 1.4; }
+    .gallery-caption span {
+      display: block; color: var(--orange); font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 3px;
+    }
+    .gi-featured .gallery-caption { font-size: 16px; }
+    .gi-featured .gallery-caption span { font-size: 12px; }
+
+    /* Lightbox */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9998;
+      background: rgba(0,0,0,.92); align-items: center; justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    .lb-inner {
+      position: relative; max-width: 90vw; max-height: 90vh;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .lb-inner img {
+      max-width: 90vw; max-height: 80vh; object-fit: contain;
+      border-radius: 8px; box-shadow: 0 8px 48px rgba(0,0,0,.6);
+    }
+    .lb-caption {
+      margin-top: 14px; color: rgba(255,255,255,.8); font-size: 14px;
+      text-align: center; max-width: 600px; line-height: 1.5;
+    }
+    .lb-close {
+      position: absolute; top: -44px; right: 0;
+      background: none; border: none; color: white; font-size: 28px;
+      cursor: pointer; line-height: 1; padding: 4px 8px;
+      transition: color .2s;
+    }
+    .lb-close:hover { color: var(--orange); }
+    .lb-prev, .lb-next {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      background: rgba(232,96,10,.85); border: none; color: white;
+      font-size: 32px; cursor: pointer; padding: 12px 18px;
+      border-radius: 6px; transition: background .2s; z-index: 9999;
+      line-height: 1;
+    }
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
+    .lb-prev:hover, .lb-next:hover { background: var(--orange); }
+
+    /* Responsive gallery */
+    @media (max-width: 960px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+      .gi-featured { grid-column: span 2; grid-row: span 1; }
+      .gs-divider { display: none; }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 8px; }
+      .gi-featured { grid-column: span 2; }
+      .gallery-filters { gap: 6px; }
+      .gf-btn { font-size: 11px; padding: 6px 12px; }
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--gray-bg); }
+    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-image-wrap { position: relative; }
+    .about-image-frame { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/5; background: linear-gradient(135deg,#2a2a2a,#1a1a1a); display: flex; align-items: center; justify-content: center; }
+    .owner-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 40px; height: 100%; }
+    .owner-avatar { width: 110px; height: 110px; border-radius: 50%; background: rgba(232,96,10,.2); border: 3px solid var(--orange); display: flex; align-items: center; justify-content: center; font-size: 52px; }
+    .owner-placeholder-name  { color: var(--white); font-size: 20px; font-weight: 700; text-align: center; }
+    .owner-placeholder-title { color: var(--orange); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-align: center; }
+
+    .about-logo-img {
+      width: 220px;
+      max-width: 80%;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 8px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .about-badge-overlay { position: absolute; bottom: -18px; right: -18px; background: var(--orange); color: var(--white); border-radius: 12px; padding: 18px 22px; text-align: center; box-shadow: var(--shadow-lg); }
+    .about-badge-overlay strong { display: block; font-size: 26px; font-weight: 800; font-family: 'Barlow Condensed',sans-serif; }
+    .about-badge-overlay span  { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: .9; }
+
+    .wob-section { margin-top: 28px; background: linear-gradient(135deg,var(--gray-dark),#2d2d2d); border-radius: 12px; padding: 26px 28px; border-left: 4px solid var(--orange); }
+    .wob-section-title { display: flex; align-items: center; gap: 8px; color: var(--orange); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .wob-section-text { color: rgba(255,255,255,.82); font-size: 14px; line-height: 1.7; }
+    .wob-section-text strong { color: var(--white); }
+
+    .about-points { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+    .about-point { display: flex; align-items: flex-start; gap: 10px; }
+    .about-point-dot { width: 9px; height: 9px; min-width: 9px; background: var(--orange); border-radius: 50%; margin-top: 5px; }
+    .about-point-text { color: var(--gray); font-size: 14px; line-height: 1.5; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--gray-dark); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; }
+    .contact-info .section-title { color: var(--white); }
+    .contact-info .section-desc  { color: rgba(255,255,255,.62); margin-bottom: 36px; }
+    .contact-items { display: flex; flex-direction: column; gap: 22px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-item-icon { width: 42px; height: 42px; min-width: 42px; background: rgba(232,96,10,.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .contact-item-text strong { display: block; color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .contact-item-text a, .contact-item-text span { color: rgba(255,255,255,.62); font-size: 13px; text-decoration: none; transition: color .2s; }
+    .contact-item-text a:hover { color: var(--orange); }
+
+    .contact-form { background: var(--white); border-radius: 16px; padding: 44px 40px; }
+    .form-title { font-size: 21px; font-weight: 700; color: var(--gray-dark); margin-bottom: 26px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--gray-mid); margin-bottom: 5px; letter-spacing: .3px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-light); border-radius: 8px; font-size: 14px; font-family: inherit; color: var(--gray-dark); background: var(--white); transition: border-color .2s, box-shadow .2s; outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(232,96,10,.1); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; background: var(--orange); color: var(--white); border: none; padding: 15px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: .5px; transition: background .2s, transform .2s; font-family: inherit; }
+    .form-submit:hover { background: var(--orange-light); transform: translateY(-1px); }
+    .success-msg { display: none; background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 13px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; margin-bottom: 16px; }
+
+    /* ── FOOTER ── */
+    footer { background: #111; border-top: 3px solid var(--orange); padding: 36px 48px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo-img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 5px;
+      opacity: 0.92;
+    }
+    .footer-right { text-align: right; }
+    .footer-copy { color: rgba(255,255,255,.4); font-size: 12px; margin-bottom: 6px; }
+    .footer-links { display: flex; gap: 20px; justify-content: flex-end; }
+    .footer-links a { color: rgba(255,255,255,.4); text-decoration: none; font-size: 12px; transition: color .2s; }
+    .footer-links a:hover { color: var(--orange); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      section { padding: 68px 24px; }
+      .diff-inner, .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+      .diff-visual { display: none; }
+      .about-badge-overlay { right: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { padding: 28px 24px; }
+    }
+    @media (max-width: 560px) {
+      .hero-stats { gap: 22px; }
+      .contact-form { padding: 26px 18px; }
+    }
+
+    /* ── SOUND TOGGLE ── */
+    #soundToggle {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gray-dark);
+      color: var(--white);
+      border: 2px solid var(--orange);
+      border-radius: 50px;
+      padding: 10px 20px 10px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(232,96,10,0.35), 0 2px 8px rgba(0,0,0,0.5);
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      outline: none;
+      user-select: none;
+    }
+    #soundToggle:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(232,96,10,0.5);
+    }
+    #soundToggle:active { transform: translateY(0); }
+    #soundToggle.playing { background: var(--orange); border-color: var(--orange-light); }
+    #soundToggle.playing:hover { background: var(--orange-dark); }
+
+    .sound-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    #soundToggle.playing .sound-icon { background: rgba(255,255,255,0.2); }
+
+    /* Sound wave animation when playing */
+    .sound-waves {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      height: 16px;
+    }
+    .sound-wave-bar {
+      width: 3px;
+      background: currentColor;
+      border-radius: 2px;
+      animation: none;
+      height: 4px;
+      transition: height 0.2s;
+    }
+    #soundToggle.playing .sound-wave-bar:nth-child(1) { animation: waveBar 0.8s ease-in-out infinite; }
+    #soundToggle.playing .sound-wave-bar:nth-child(2) { animation: waveBar 0.8s ease-in-out 0.15s infinite; }
+    #soundToggle.playing .sound-wave-bar:nth-child(3) { animation: waveBar 0.8s ease-in-out 0.3s infinite; }
+    #soundToggle.playing .sound-wave-bar:nth-child(4) { animation: waveBar 0.8s ease-in-out 0.45s infinite; }
+    @keyframes waveBar {
+      0%, 100% { height: 4px; }
+      50%       { height: 14px; }
+    }
+
+    @media (max-width: 560px) {
+      #soundToggle { bottom: 16px; right: 16px; padding: 9px 14px 9px 11px; font-size: 12px; }
+      .sound-icon  { width: 26px; height: 26px; font-size: 13px; }
+    }
+
+
+    /* ── WBE BADGE ── */
+    .wbe-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 14px;
+      padding-left: 14px;
+      border-left: 1px solid rgba(255,255,255,0.15);
+      gap: 0;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    /* SVG seal ring */
+    .wbe-seal {
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+    }
+
+    /* Footer version — slightly smaller */
+    .wbe-badge-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(232,96,10,0.12);
+      border: 1.5px solid rgba(232,96,10,0.4);
+      border-radius: 50px;
+      padding: 7px 16px 7px 8px;
+      text-decoration: none;
+    }
+
+    .wbe-badge-footer .wbe-seal-sm {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    .wbe-badge-footer-text {
+      line-height: 1.25;
+    }
+
+    .wbe-badge-footer-text strong {
+      display: block;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .wbe-badge-footer-text span {
+      display: block;
+      color: rgba(255,255,255,0.55);
+      font-size: 9.5px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 960px) {
+      .wbe-badge { display: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav>
+  <div style="display:flex;align-items:center;">
+    <a href="#home" class="nav-logo">
+      <img src="logo.jpeg" alt="Ziel Contractor Drilling Company" class="nav-logo-img" onerror="this.src='logo.jpeg'"/>
+    </a>
+    <div class="wbe-badge" title="Woman-Owned Business — WBE Certified">
+      <svg class="wbe-seal" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" aria-label="Woman-Owned Business — WBE Certified">
+          <!-- Outer ring -->
+          <circle cx="26" cy="26" r="24" fill="#E8600A" />
+          <!-- Dashed inner ring -->
+          <circle cx="26" cy="26" r="20" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1" stroke-dasharray="3 2"/>
+          <!-- Star accents -->
+          <text x="26" y="10.5" text-anchor="middle" font-size="4.5" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">★</text>
+          <text x="26" y="44.5" text-anchor="middle" font-size="4.5" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">★</text>
+          <!-- WBE centre text -->
+          <text x="26" y="24" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="'Barlow Condensed',Arial Black,sans-serif" letter-spacing="1">WBE</text>
+          <!-- Sub text -->
+          <text x="26" y="32.5" text-anchor="middle" font-size="4" fill="rgba(255,255,255,0.9)" font-family="Arial,sans-serif" letter-spacing="0.5">WOMAN OWNED</text>
+        </svg>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:2407160803" class="nav-phone">📞 240-716-0803</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+
+    <!-- Full-size logo lockup in hero -->
+    <div class="hero-logo-lockup">
+      <img src="logo.jpeg" alt="Ziel Contractor Drilling Company" class="hero-logo-img" onerror="this.src='logo.jpeg'"/>
+    </div>
+
+    <div class="hero-badge">Woman-Owned Business · 7+ Years Experience</div>
+    <h1>Built on Trust.<br><em>Delivered</em> with<br>Precision.</h1>
+    <p class="hero-sub">Ziel Contractor Drilling Company specializes in trenchless underground boring, fiber/utility infrastructure, and general contracting — serving Ohio and surrounding areas with safety-first excellence.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>7+</strong><span>Years in the Field</span></div>
+      <div class="hero-stat"><strong>HDD</strong><span>Drill &amp; Missile</span></div>
+      <div class="hero-stat"><strong>WBE</strong><span>Woman-Owned</span></div>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get a Free Quote →</a>
+      <a href="#gallery" class="btn-outline">View Our Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ WOB BANNER ══════════════════════════ -->
+<div class="wob-banner">
+  <div class="wob-banner-inner">
+    <span class="wob-icon">👷‍♀️</span>
+    <span class="wob-text">Proudly Woman-Owned</span>
+    <div class="wob-divider"></div>
+    <span class="wob-sub">Breaking Barriers in Construction &amp; Utility Infrastructure</span>
+    <div class="wob-divider"></div>
+    <span class="wob-sub">Led by <strong>Edliza Capellan</strong> · Lawrenceville, GA</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════ SERVICES ══════════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Expert Services Across Every Phase</h2>
+      <p class="section-desc">From underground boring and fiber installation to full-scale commercial and residential contracting, Ziel delivers end-to-end solutions with unmatched precision and safety compliance.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card featured">
+        <div class="service-icon">🔩</div>
+        <div class="service-title">Underground Boring — Drill &amp; Missile</div>
+        <div class="service-desc">Our flagship specialty: trenchless technology using Horizontal Directional Drilling (HDD) and pneumatic missile boring. We install conduit, fiber, and utility lines beneath roads, driveways, and structures with zero surface disruption.</div>
+        <span class="service-tag">⭐ Our Signature Expertise</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📡</div>
+        <div class="service-title">Fiber &amp; Utility Installation</div>
+        <div class="service-desc">Precision installation of fiber optic networks and utility infrastructure for telecom providers, municipalities, and commercial clients. From conduit runs to final connections.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <div class="service-title">General Contracting</div>
+        <div class="service-desc">Full-scale project coordination from permit acquisition through final inspection. We manage subcontractors, budgets, and timelines with total accountability.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <div class="service-title">Project Management</div>
+        <div class="service-desc">Experienced on-site and off-site project management. Tight timelines, clear communication, and uncompromising quality from day one to ribbon-cutting.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚧</div>
+        <div class="service-title">Site Prep &amp; Excavation</div>
+        <div class="service-desc">Land clearing, grading, trenching, and excavation readying your site for every phase. Full safety flagging, utility locates, and regulatory compliance on every dig.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ DRILL & MISSILE SPOTLIGHT ══════════════════════════ -->
+<div class="diff-strip">
+  <div class="diff-inner">
+    <div class="diff-text">
+      <span class="section-label">Our Signature Specialty</span>
+      <h2 class="section-title" style="color:white;">Trenchless Technology:<br>Drill &amp; Missile Boring</h2>
+      <p class="section-desc">The underground utility industry demands precision operators. Our 7+ years of hands-on HDD and missile boring experience means no torn-up driveways, no road closures — just clean, efficient underground infrastructure.</p>
+      <div class="diff-features">
+        <div class="diff-feature"><div class="diff-check">✓</div><div class="diff-feature-text"><strong>Horizontal Directional Drilling (HDD)</strong> — guided boring for long-distance utility runs under roads and obstacles</div></div>
+        <div class="diff-feature"><div class="diff-check">✓</div><div class="diff-feature-text"><strong>Pneumatic Missile Boring</strong> — fast short-bore installations under driveways, roads, and foundations</div></div>
+        <div class="diff-feature"><div class="diff-check">✓</div><div class="diff-feature-text"><strong>Fiber Optic Conduit</strong> — precision-installed conduit runs for ISP and telecom networks</div></div>
+        <div class="diff-feature"><div class="diff-check">✓</div><div class="diff-feature-text"><strong>Zero Surface Disruption</strong> — protect lawns, driveways, and existing infrastructure overhead</div></div>
+        <div class="diff-feature"><div class="diff-check">✓</div><div class="diff-feature-text"><strong>Full Safety Compliance</strong> — OSHA standards, utility locates, and site flagging on every single job</div></div>
+      </div>
+    </div>
+    <div class="diff-visual">
+      <div class="diff-stat-box"><strong>7+</strong><span>Years Boring Experience</span></div>
+      <div class="diff-stat-box"><strong>0</strong><span>Surface Cuts Needed</span></div>
+      <div class="diff-stat-box accent"><strong>"Where others dig up, we go under."</strong><span>— Ziel's Trenchless Promise</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════ GALLERY ══════════════════════════ GALLERY ═══════🔩 Underground Boring — Drill &amp; Missile featured plus full spotlight section added to site for signature services. WBE certified badges prominently displayed in header and footer. Contact form wired with success state. Re-deploying now. -->
